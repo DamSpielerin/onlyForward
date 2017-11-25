@@ -28,7 +28,7 @@ a:hover {
 }
 
 .city{
-	padding: 20px 10px 0px 10px;
+	padding: 20px 15px 0px 10px;
 }
 
 .city label{
@@ -42,14 +42,14 @@ a:hover {
 }
 
 .city input{
-	margin-right: 20px;
 	color: #777;
     border: 1px solid #abadb3;
     padding: 2px;
     font-size: 14px;
     line-height: 20px;
-    height: 22px;
-    border-radius: 3px;
+    height: 20px;
+    width: 207px;
+    border-radius: 3px 0px 0px 3px;
     outline: 0;
 }
 
@@ -64,7 +64,7 @@ a:hover {
     top: -2px;
     left: -7px;
     padding: 0;
-    border-radius: 2px;
+    border-radius: 0px 3px 3px 0px;
 }
 
 .center{
