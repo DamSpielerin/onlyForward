@@ -35,7 +35,7 @@ iframe{
 	padding: 20px 9px 0px 10px;
 }
 
-.city label{
+.city span{
 	padding-bottom: 7px;
     display: inline-block;
     width: 280px;

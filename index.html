@@ -7,14 +7,15 @@
     <script src="scripts/content.js" type="text/javascript"></script>
     <link href="style.css" rel="stylesheet" type="text/css"/>
     <meta charset="utf-8">
+    <script src="http://ip-api.com/json/?fields=country,city&callback=showCity"></script>
 </head>
 <body>
-
 
 <div class="popup">
 
    <div class="city">
-    <label></label><br />
+    <span>Weather in <label></label></span>
+    <br />
      <input type="text" class="town" placeholder="Select city"/>
      <button id="show">Show</button>
    </div>

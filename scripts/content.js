@@ -37,7 +37,7 @@ function getWeatherFromOpenWeather(city) {
 		}).success (function( json  ) {
 		if(json.city){
 			console.log(json);
-			$( ".city" ).find('label').html( "<strong>Weather in " + json.city.name + "</strong>" );
+			$( ".city" ).find('label').html( "<strong>" + json.city.name + "</strong>" );
 			$(".answer").html(json.list[0].weather[0].main);
 			getWeatherFromDarkSky(json.city.coord.lat,json.city.coord.lon)
 			jsonOpenWeather = json;
