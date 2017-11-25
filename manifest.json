@@ -8,7 +8,7 @@
  },
   "content_scripts": [
     {
-      "matches": [ "*://*/*" ],
+      "matches": [ "*://*/*", "https://www.google.com/" ],
       "js": [ "scripts/content.js" ]
     }
   ],
@@ -17,9 +17,13 @@
   },
    "permissions": [
      "activeTab",
-     "storage"
+     "storage",
+     "https://www.google.com/*",
+     "tabs"
    ],
-
+    "web_accessible_resources":[
+      "https://www.google.com/jsapi"
+    ],
     "browser_action": {
       "default_title": "Weather Aggregator",
       "default_icon":  "images/weather.png",

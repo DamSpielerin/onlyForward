@@ -45,6 +45,8 @@ function getWeatherFromOpenWeather(city) {
 			$(".answer").html(json.list[0].weather[0].main);
 			getWeatherFromDarkSky(json.city.coord.lat,json.city.coord.lon)
 			jsonOpenWeather = json;
+		}else{
+			$( ".answer" ).html( json);
 		}
 	}).fail(function(jqxhr, textStatus, error ) {
 		var err = textStatus + ", " + error;
@@ -63,6 +65,7 @@ function getWeatherFromDarkSky(lat,lon){
 		}).success (function( json  ) {
 		jsonDarkSky = json;
 		console.log(json.daily.icon);
+		$(".answer").append(" "+json.daily.icon);
 		showWeather();
 	}).fail(function(jqxhr, textStatus, error ) {
 		var err = textStatus + ", " + error;
@@ -88,11 +91,11 @@ function showWeather() {
 		setIconByStatus(statusDarkSky,$("#img2"));
 	}
 	console.log(temperatureOpenWeather);
-	console.log(temperatureDarkSky);
+	console.log(jsonDarkSky);
 	$(".temp0").find("span").text((temperatureOpenWeather>0 ? "+" : "" ) + temperatureOpenWeather);
 	$(".temp1").find("span").text((temperatureOpenWeather>0 ? "+" : "" ) + temperatureOpenWeather);
 	$(".temp2").find("span").text((temperatureDarkSky>0 ? "+" : "") + temperatureDarkSky);
-
+	// setTemperature();
 
 }
 function setIconByStatus(status,img) {
