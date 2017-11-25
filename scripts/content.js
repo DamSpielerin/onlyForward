@@ -1,18 +1,17 @@
-$(document).ready(
-	function () {
-		var json = getWeatherFromOpenWeather ('Moscow');
-		if(json){
-			$( ".day_icon" ).html( "Weather at <strong>" + json.city.name + "</strong>" );
-		}else{
-			$( ".day_icon" ).html( "Server not responded" );
+$(document).ready(function() {
+	$("#show").click(console.log("click"))
 
-		}
+	var jsonOpenWeather  = getWeatherFromOpenWeather('Moscow');
+	if(!(typeof jsonOpenWeather == "string")){
+			$( "#answer" ).html( "Weather at <strong>" + jsonOpenWeather.city.name + "</strong>" );
+		}else{
+		$( "#answer" ).html( jsonOpenWeather);
 
 	}
 
-);
+});
 
-function getWeatherFromOpenWeather (city) {
+function getWeatherFromOpenWeather(city) {
 	var answer='';
 	var APPIDS = [
 		"92af67689082c67a491224c1bdb7c8dd",
@@ -33,9 +32,13 @@ function getWeatherFromOpenWeather (city) {
 			APPID: APPIDS[Math.floor(Math.random() * 11)]
 		}).done (function( json ) {
 		answer = json;
+		console.log(json);
+		$( "#answer" ).html( answer);
 	}).fail(function(jqxhr, textStatus, error ) {
 		var err = textStatus + ", " + error;
+		console.log(err);
 		answer = "Request Failed: " + err;
 	});
 	return answer;
 }
+

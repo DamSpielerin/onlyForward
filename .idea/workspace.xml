@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3d831db-31ad-48e3-a7cc-5fed2a0b1582" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/weather_big.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="f3d831db-31ad-48e3-a7cc-5fed2a0b1582" name="Default" comment="added getting OpenWeather">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/background.js" afterPath="$PROJECT_DIR$/scripts/background.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/content.js" afterPath="$PROJECT_DIR$/scripts/content.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+            <state relative-caret-position="462">
+              <caret line="21" column="10" lean-forward="false" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -38,8 +39,8 @@
       <file leaf-file-name="manifest.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manifest.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+            <state relative-caret-position="440">
+              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -48,20 +49,21 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+            <state relative-caret-position="242">
+              <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
               <folding>
-                <marker date="1511607874107" expanded="true" signature="4:6" ph="{...}" />
+                <marker date="1511614208895" expanded="true" signature="4:6" ph="{...}" />
+                <marker date="1511614208895" expanded="true" signature="1280:1286" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="content.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="content.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/content.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="286">
+              <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -71,6 +73,18 @@
         <entry file="file://$PROJECT_DIR$/images/weather.png">
           <provider selected="true" editor-type-id="images">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery-1.11.2.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/jquery-1.11.2.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
@@ -89,10 +103,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scripts/background.js" />
-        <option value="$PROJECT_DIR$/scripts/content.js" />
         <option value="$PROJECT_DIR$/manifest.json" />
+        <option value="$PROJECT_DIR$/scripts/background.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/scripts/content.js" />
       </list>
     </option>
   </component>
@@ -184,54 +198,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_01.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_02.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_03.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_04.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_05.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_06.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_07.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_08.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_09.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_10.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_11.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_12.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_13.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_14.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_15.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_16.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_17.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_18.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_19.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_20.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_21.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_22.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_23.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_24.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_25.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_26.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_27.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_28.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_29.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_30.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_31.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_32.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_33.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_34.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_35.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_36.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_37.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_38.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_39.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_40.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_41.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_42.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_43.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_44.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_45.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_46.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_47.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/images/icons/weather_48.png</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -343,7 +309,7 @@
       <option name="presentableId" value="Default" />
       <updated>1511600307250</updated>
       <workItem from="1511600308498" duration="929000" />
-      <workItem from="1511601449847" duration="5672000" />
+      <workItem from="1511601449847" duration="12302000" />
     </task>
     <task id="LOCAL-00001" summary="added scripts">
       <created>1511607334401</created>
@@ -352,25 +318,40 @@
       <option name="project" value="LOCAL" />
       <updated>1511607334401</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added big image">
+      <created>1511607985577</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1511607985577</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added getting OpenWeather">
+      <created>1511613705815</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1511613705815</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6601000" />
+    <option name="totallyTimeSpent" value="13231000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1932" height="1045" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295838" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295838" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295838" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
     </layout>
@@ -383,7 +364,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added scripts" />
-    <option name="LAST_COMMIT_MESSAGE" value="added scripts" />
+    <MESSAGE value="added big image" />
+    <MESSAGE value="added getting OpenWeather" />
+    <option name="LAST_COMMIT_MESSAGE" value="added getting OpenWeather" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -403,14 +386,29 @@
         <state relative-caret-position="242">
           <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
           <folding>
-            <marker date="1511607874107" expanded="true" signature="4:6" ph="{...}" />
+            <marker date="1511614208895" expanded="true" signature="4:6" ph="{...}" />
+            <marker date="1511614208895" expanded="true" signature="1280:1286" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/weather.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding>
+            <marker date="1511614208895" expanded="true" signature="4:6" ph="{...}" />
+            <marker date="1511614208895" expanded="true" signature="1280:1286" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/background.js">
@@ -421,36 +419,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/content.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="462">
+          <caret line="21" column="10" lean-forward="false" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
+    <entry file="file://$PROJECT_DIR$/scripts/jquery-1.11.2.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1511607874107" expanded="true" signature="4:6" ph="{...}" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manifest.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/images/weather.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/scripts/content.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+        <state relative-caret-position="286">
+          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
           <folding />
         </state>
       </provider>
