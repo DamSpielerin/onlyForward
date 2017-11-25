@@ -1,6 +1,6 @@
  {
   "manifest_version": 2,
-  "name": "Агрегатор погоды",
+  "name": "Weather Aggregator",
   "version": "1.0",
   
   "icons": {
@@ -21,7 +21,7 @@
    ],
 
     "browser_action": {
-      "default_title": "Агрегатор погоды",
+      "default_title": "Weather Aggregator",
       "default_icon":  "images/weather.png",
       "default_popup": "/index.html"
   }

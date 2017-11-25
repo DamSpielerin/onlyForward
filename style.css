@@ -38,6 +38,12 @@ iframe{
 .city label{
 	padding-bottom: 7px;
     display: inline-block;
+    width: 280px;
+    text-align: center;
+    font-size: 18px;
+    position: absolute;
+    top: 7px;
+    color: #1e94ca;
 }
 
 .city button{
