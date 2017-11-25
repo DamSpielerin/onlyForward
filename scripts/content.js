@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	// google.load("visualization", "1", {packages:["corechart"]});
-	//getWeather("Moscow");
+	getWeather("Moscow");
 	$("#show").on("click",function() {
 		var town = $(".town").val();
 		getWeather(town);
@@ -29,10 +29,11 @@ function getWeatherFromOpenWeather(city) {
 	$.getJSON("http://api.openweathermap.org/data/2.5/forecast",
 		{
 			q: city,
+			units: "metric",
 			APPID: APPIDS[Math.floor(Math.random() * 11)]
 		}).success (function( json  ) {
 		if(json.city){
-			$( ".city" ).html( "<strong>" + json.city.name + "</strong>" );
+			$( ".city" ).find('label').html( "<strong>" + json.city.name + "</strong>" );
 			getWeatherFromDarkSky(json.city.coord.lat,json.city.coord.lon)
 		}else{
 			$( ".answer" ).html( jsonOpenWeather);
