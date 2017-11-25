@@ -3,11 +3,13 @@
  <head>
     <title>Агрегатор погоды</title>
 	    <script src="jquery.js" type="text/javascript"></script>
+	    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 	    <link href="style.css" rel="stylesheet" type="text/css"/>
 	    <meta charset="utf-8">
   </head>
 <body>
   
+<script>google.load("visualization", "1", {packages:["corechart"]});</script>
 
 <div id="" class="popup">
 
@@ -17,7 +19,18 @@
      <button>Показать</button>
    </div>
 
-  <div class="center"> 
+
+  <div class="center" style="display: none;"> 
+   <div class="day_icon">
+     <img class="" src="images/icons/weather_32.png" Title = "weather">
+   </div>
+
+   <div class="temp">
+      <span>+15</span>
+   </div>
+  </div> 
+
+  <div class="center_all" style="display: block;"> 
    <div class="day_icon_first">
      <img class="" src="images/icons/weather_32.png" Title = "weather">
    </div>
@@ -40,13 +53,7 @@
    <div class="clear-both"></div>
    
    <div class="footer">
-     <ul>
-      <li>60%</li>
-      <li>wind</li>
-      <li>влажность</li>
-      <li>давление</li>
-      <li></li>
-     </ul>
+
    </div>
 
 </div>

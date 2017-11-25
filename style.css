@@ -45,22 +45,35 @@ a:hover {
 	margin-right: 20px;
 }
 
+.center{
+    display: inline-block;
+    padding: 15px 50px;
+    height: 80px;
+}
+
+.day_icon{
+    float: left;
+}
+.day_icon img{
+    height: 90px;
+}
 .temp{
-    width: 60px;
+    width: 90px;
     float: left;
     padding-top: 17px;
     padding-left: 2px;;	
 }
 
 .temp span{
-	font-size: 30px;
+	font-size: 42px;
     color: yellow;
 }
 
-.center{
-	width: 100%;
+
+.center_all{
     display: inline-block;
-    padding-top: 15px;
+    padding: 15px;
+    height: 80px;
 }
 
 .day_icon_first, .day_icon_second{
@@ -70,23 +83,21 @@ a:hover {
 .day_icon_first img, .day_icon_second img{
 	height: 60px;
 }
+.center_all >.temp{
+    width: 60px;
+    float: left;
+    padding-top: 17px;
+    padding-left: 2px;;	
+}
+
+.center_all >.temp span{
+	font-size: 30px;
+    color: yellow;
+}
 
 .footer{
 	width: 94%;
     height: 60px;
     padding: 10px;
-}
-
-.footer ul{
-	border-top: solid 1px;
-}
-
-.footer li{
-	list-style: none;
-    float: left;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 10px;
-    width: 50px;
-    height: 50px;
+    border-top: solid 1px;
 }
