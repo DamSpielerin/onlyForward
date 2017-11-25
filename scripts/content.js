@@ -1,7 +1,9 @@
 $(document).ready(function() {
+	// script = document.createElement('script');
+	// script.src = "https://apis.google.com/js/client.js?onload=init";
+	// (document.head||document.documentElement).appendChild(script);
 	// google.load("visualization", "1", {packages:["corechart"]});
-	// getWeather("Moscow");
-
+	 getWeather("Kherson");
 	var jsonOpenWeather = {};
 	var jsonDarkSky = {};
 	$("#show").on("click",function() {
@@ -22,18 +24,20 @@ function getWeatherFromOpenWeather(city) {
 		"d9a80193c1bfda281c186a043c01a7c4",
 		"d1db680b0332fb588732e7340a1e3adf",
 		"2b742ea345c886bbeac94ff9dfebe739",
+		"f0b0dd5a828feb33a240fd9dc2cb85f8",
 		"9e7d8ee4dd7dd036d8304a93bb1a8b61",
 		"fabb51d1360a316653b5465a15f2eefd",
 		"ab1fe445feda67e59fdfce9abb6c653f",
 		"5fec7a468fc537d0d19ea4e979c177f0",
 		"9c3e925755888724981571b56ef8a87f",
+		"ed5ace2097103d5a9573c39ccfb9e38d",
 		"73d8081eb0aad8eec8e5adaf220ef393"
 	];
 	$.getJSON("http://api.openweathermap.org/data/2.5/forecast",
-		{
+			{
 			q: city,
 			units: "metric",
-			APPID: APPIDS[Math.floor(Math.random() * 11)]
+			APPID: APPIDS[Math.floor(Math.random() * 13)]
 		}).success (function( json  ) {
 		if(json.city){
 			console.log(json);
@@ -57,13 +61,12 @@ function getWeatherFromDarkSky(lat,lon){
 
 	$.getJSON(" https://api.darksky.net/forecast/b0f091637a0802c5d88a73936b3df132/"+lat+","+lon,
 		{
-			exclude: "minutely,hourly,currently"
+			exclude: "minutely,hourly"
 		}).success (function( json  ) {
 		jsonDarkSky = json;
 		console.log(json.daily.icon);
 		$(".answer").append(" "+json.daily.icon);
 		showWeather();
-		// console.log(jsonOpenWeather);
 	}).fail(function(jqxhr, textStatus, error ) {
 		var err = textStatus + ", " + error;
 		console.log("Request Failed: " + err);
@@ -74,29 +77,37 @@ function getWeatherFromDarkSky(lat,lon){
 }
 function showWeather() {
 	var statusOpenWeather = jsonOpenWeather.list[0].weather[0].main.toLowerCase();
-	var statusDarkSky =jsonDarkSky.daily.icon
+	var statusDarkSky = jsonDarkSky.daily.icon
+	var temperatureOpenWeather = Math.round(jsonOpenWeather.list[0].main.temp);
+	var temperatureDarkSky = fromFtoC(jsonDarkSky.currently.temperature);
 	if(statusOpenWeather == statusDarkSky){
 		$(".center_all").hide();
 		$(".center").show();
 		setIconByStatus(statusDarkSky,$("#img0"));
-		console.log("equal")
 	}else{
 		$(".center").hide();
 		$(".center_all").show();
 		setIconByStatus(statusOpenWeather,$("#img1"));
 		setIconByStatus(statusDarkSky,$("#img2"));
-		console.log("diff")
 	}
+	console.log(temperatureOpenWeather);
+	console.log(jsonDarkSky);
+	$(".temp0").find("span").text((temperatureOpenWeather>0 ? "+" : "" ) + temperatureOpenWeather);
+	$(".temp1").find("span").text((temperatureOpenWeather>0 ? "+" : "" ) + temperatureOpenWeather);
+	$(".temp2").find("span").text((temperatureDarkSky>0 ? "+" : "") + temperatureDarkSky);
+
 
 }
 function setIconByStatus(status,img) {
-
 	$.getJSON('icons.json', function(data) {
 		$.each(data, function(key, val) {
 			if(key==status){
 				img.attr("src", "images/icons/"+val+".png")
 			}
 		});
-
 	});;
+}
+
+function fromFtoC(f){
+	return  Math.round((f - 32) / 1.8);
 }
