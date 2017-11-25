@@ -1,13 +1,16 @@
 $(document).ready(function() {
 	// google.load("visualization", "1", {packages:["corechart"]});
-	getWeather("Moscow");
+	// getWeather("Moscow");
+
+	var jsonOpenWeather = {};
+	var jsonDarkSky = {};
 	$("#show").on("click",function() {
 		var town = $(".town").val();
 		getWeather(town);
 	});
 });
 function getWeather(city) {
-	var jsonOpenWeather  = getWeatherFromOpenWeather(city);
+	getWeatherFromOpenWeather(city);
 
 }
 
@@ -33,10 +36,13 @@ function getWeatherFromOpenWeather(city) {
 			APPID: APPIDS[Math.floor(Math.random() * 11)]
 		}).success (function( json  ) {
 		if(json.city){
+			console.log(json);
 			$( ".city" ).find('label').html( "<strong>" + json.city.name + "</strong>" );
+			$(".answer").html(json.list[0].weather[0].main);
 			getWeatherFromDarkSky(json.city.coord.lat,json.city.coord.lon)
+			jsonOpenWeather = json;
 		}else{
-			$( ".answer" ).html( jsonOpenWeather);
+			$( ".answer" ).html( json);
 		}
 	}).fail(function(jqxhr, textStatus, error ) {
 		var err = textStatus + ", " + error;
@@ -53,12 +59,44 @@ function getWeatherFromDarkSky(lat,lon){
 		{
 			exclude: "minutely,hourly,currently"
 		}).success (function( json  ) {
+		jsonDarkSky = json;
 		console.log(json.daily.icon);
-
+		$(".answer").append(" "+json.daily.icon);
+		showWeather();
+		// console.log(jsonOpenWeather);
 	}).fail(function(jqxhr, textStatus, error ) {
 		var err = textStatus + ", " + error;
 		console.log("Request Failed: " + err);
 		answer =  err;
 	});
+
 	return answer;
+}
+function showWeather() {
+	var statusOpenWeather = jsonOpenWeather.list[0].weather[0].main.toLowerCase();
+	var statusDarkSky =jsonDarkSky.daily.icon
+	if(statusOpenWeather == statusDarkSky){
+		$(".center_all").hide();
+		$(".center").show();
+		setIconByStatus(statusDarkSky,$("#img0"));
+		console.log("equal")
+	}else{
+		$(".center").hide();
+		$(".center_all").show();
+		setIconByStatus(statusOpenWeather,$("#img1"));
+		setIconByStatus(statusDarkSky,$("#img2"));
+		console.log("diff")
+	}
+
+}
+function setIconByStatus(status,img) {
+
+	$.getJSON('icons.json', function(data) {
+		$.each(data, function(key, val) {
+			if(key==status){
+				img.attr("src", "images/icons/"+val+".png")
+			}
+		});
+
+	});;
 }
