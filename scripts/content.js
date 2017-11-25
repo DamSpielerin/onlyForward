@@ -1,15 +1,15 @@
 $(document).ready(function() {
-	$("#show").click(console.log("click"))
-
-	var jsonOpenWeather  = getWeatherFromOpenWeather('Moscow');
-	if(!(typeof jsonOpenWeather == "string")){
-			$( "#answer" ).html( "Weather at <strong>" + jsonOpenWeather.city.name + "</strong>" );
-		}else{
-		$( "#answer" ).html( jsonOpenWeather);
-
-	}
-
+	// google.load("visualization", "1", {packages:["corechart"]});
+	//getWeather("Moscow");
+	$("#show").on("click",function() {
+		var town = $(".town").val();
+		getWeather(town);
+	});
 });
+function getWeather(city) {
+	var jsonOpenWeather  = getWeatherFromOpenWeather(city);
+
+}
 
 function getWeatherFromOpenWeather(city) {
 	var answer='';
@@ -28,17 +28,36 @@ function getWeatherFromOpenWeather(city) {
 	];
 	$.getJSON("http://api.openweathermap.org/data/2.5/forecast",
 		{
-			id: 524901,
+			q: city,
 			APPID: APPIDS[Math.floor(Math.random() * 11)]
-		}).done (function( json ) {
-		answer = json;
-		console.log(json);
-		$( "#answer" ).html( answer);
+		}).success (function( json  ) {
+		if(json.city){
+			$( ".city" ).html( "<strong>" + json.city.name + "</strong>" );
+			getWeatherFromDarkSky(json.city.coord.lat,json.city.coord.lon)
+		}else{
+			$( ".answer" ).html( jsonOpenWeather);
+		}
 	}).fail(function(jqxhr, textStatus, error ) {
 		var err = textStatus + ", " + error;
-		console.log(err);
-		answer = "Request Failed: " + err;
+		console.log("Request Failed: " + err);
+		answer =  err;
 	});
 	return answer;
 }
 
+function getWeatherFromDarkSky(lat,lon){
+	var answer='';
+
+	$.getJSON(" https://api.darksky.net/forecast/b0f091637a0802c5d88a73936b3df132/"+lat+","+lon,
+		{
+			exclude: "minutely,hourly,currently"
+		}).success (function( json  ) {
+		console.log(json.daily.icon);
+
+	}).fail(function(jqxhr, textStatus, error ) {
+		var err = textStatus + ", " + error;
+		console.log("Request Failed: " + err);
+		answer =  err;
+	});
+	return answer;
+}
