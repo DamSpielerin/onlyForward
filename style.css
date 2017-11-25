@@ -94,7 +94,15 @@ iframe{
 	font-size: 42px;
     color: yellow;
 }
-
+.cell{
+	height: 30px;
+    float: right;
+    position: relative;
+    top: -47px;
+}
+.cell img{
+	height: 37px;
+}
 
 .center_all{
     display: inline-block;
@@ -120,6 +128,27 @@ iframe{
 	font-size: 30px;
     color: yellow;
 }
+
+.cell_first{
+	float: right;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: 135px;
+	top: 95px;
+}
+.cell_first img, .cell_second img{
+	height: 17px;
+}
+.cell_second{
+	float: right;
+	position: absolute;
+	top: 96px;
+	width: 20px;
+	height: 20px;
+	left: 266px;
+}
+
 
 .footer{
 	width: 94%;
