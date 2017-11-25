@@ -2,7 +2,8 @@
 <html>
  <head>
     <title>Агрегатор погоды</title>
-	    <script src="jquery.js" type="text/javascript"></script>
+	    <script src="scripts/jquery-1.11.2.min.js" type="text/javascript"></script>
+	    <script src="scripts/content.js" type="text/javascript"></script>
 	    <link href="style.css" rel="stylesheet" type="text/css"/>
 	    <meta charset="utf-8">
   </head>
@@ -14,7 +15,7 @@
    <div class="city">
     <label>Город</label><br />
      <input type=text />
-     <button>Показать</button>
+     <button id="show">Показать</button>
    </div>
 
   <div class="center"> 
@@ -33,14 +34,17 @@
    <div class="temp">
       <span>+15</span>
    </div>
+
   </div> 
- 
+    <div id=""></div>
   
    
    <div class="clear-both"></div>
    
+<div id="answer"></div>
    <div class="footer">
      <ul>
+
       <li>60%</li>
       <li>wind</li>
       <li>влажность</li>
@@ -48,11 +52,7 @@
       <li></li>
      </ul>
    </div>
-
 </div>
-
-
-
 
 
   </body>
