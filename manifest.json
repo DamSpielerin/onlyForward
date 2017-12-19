@@ -8,7 +8,7 @@
  },
   "content_scripts": [
     {
-      "matches": [ "*://*/*", "https://www.google.com/" ],
+      "matches": [ "*://*/*", "https://www.google.com/*" ],
       "js": [ "scripts/content.js" ]
     }
   ],
@@ -28,6 +28,8 @@
       "default_title": "Weather Aggregator",
       "default_icon":  "images/weather.png",
       "default_popup": "/index.html"
-  }
-	
-}
+    },
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google.com https://www.gstatic.com; object-src 'self'"
+
+
+ }
